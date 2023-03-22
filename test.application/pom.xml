@@ -16,6 +16,7 @@
     <docker.property.file>docker-dev.properties</docker.property.file>
     <bw.Home>/bwce/2.8</bw.Home>
     <skipTests>false</skipTests>
+    <k8s.property.file>k8s-dev.properties</k8s.property.file>
     <failIfNoTests>false</failIfNoTests>
     <tibco.Home>D:/tibco/bwce_home/2_8_1</tibco.Home>
   </properties>
@@ -43,6 +44,7 @@
           <files>
             <file>${docker.property.file}</file>
             <file>${docker.env.property.file}</file>
+            <file>${k8s.property.file}</file>
           </files>
         </configuration>
       </plugin>
@@ -75,14 +77,18 @@
               </build>
               <run>
                 <namingStrategy>alias</namingStrategy>
-                <ports>
-                  <port>${bwdocker.port.p0}</port>
-                  <port>${bwdocker.port.p1}</port>
-                </ports>
                 <envPropertyFile>${docker.env.property.file}</envPropertyFile>
               </run>
             </image>
           </images>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>io.fabric8</groupId>
+        <artifactId>fabric8-maven-plugin</artifactId>
+        <version>4.4.1</version>
+        <configuration>
+          <skip>false</skip>
         </configuration>
       </plugin>
     </plugins>

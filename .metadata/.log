@@ -3847,3 +3847,187 @@ org.eclipse.core.runtime.AssertionFailedException: null argument:
 
 !ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 12:13:54.859
 !MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was released
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 13:15:35.755
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was acquired
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 13:15:35.755
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was released
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:12.621
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was acquired
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:12.626
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was released
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:12.691
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was acquired
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:12.692
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was released
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:12.740
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was acquired
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:12.742
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was released
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:12.820
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was acquired
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:12.824
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was released
+
+!ENTRY org.eclipse.core.filebuffers 4 2 2023-03-22 15:01:12.896
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.filebuffers".
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: null argument:
+	at org.eclipse.core.runtime.Assert.isNotNull(Assert.java:88)
+	at org.eclipse.core.runtime.Assert.isNotNull(Assert.java:76)
+	at org.eclipse.ui.texteditor.spelling.SpellingReconcileStrategy.<init>(SpellingReconcileStrategy.java:154)
+	at org.eclipse.ui.editors.text.TextSourceViewerConfiguration.getReconciler(TextSourceViewerConfiguration.java:365)
+	at org.eclipse.wst.sse.ui.StructuredTextEditor.handleElementContentReplaced(StructuredTextEditor.java:2584)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$ElementStateListener.lambda$3(AbstractTextEditor.java:470)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$ElementStateListener.execute(AbstractTextEditor.java:587)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$ElementStateListener.elementContentReplaced(AbstractTextEditor.java:472)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider$FileBufferListener.bufferContentReplaced(TextFileDocumentProvider.java:286)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager$5.run(TextFileBufferManager.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.fireBufferContentReplaced(TextFileBufferManager.java:693)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.handleFileContentChanged(ResourceTextFileBuffer.java:465)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer$FileSynchronizer$2.execute(ResourceFileBuffer.java:151)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer$SafeFileChange.run(ResourceFileBuffer.java:86)
+	at org.eclipse.ui.internal.editors.text.UISynchronizationContext.run(UISynchronizationContext.java:35)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.execute(TextFileBufferManager.java:592)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer$FileSynchronizer.resourceChanged(ResourceFileBuffer.java:184)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1502)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1568)
+	at com.tibco.bw.studio.maven.action.MavenPOMProcessor.refreshProjects(MavenPOMProcessor.java:302)
+	at com.tibco.bw.studio.maven.action.MavenPOMProcessor.run(MavenPOMProcessor.java:98)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:239)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4209)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1043)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4026)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:12.931
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was acquired
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:12.940
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was released
+
+!ENTRY com.tibco.zion.common 1 0 2023-03-22 15:01:12.964
+!MESSAGE Loading default.substvar as a plaintext file.
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:12.993
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was acquired
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:12.995
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was released
+
+!ENTRY com.tibco.bw.studio.maven.plugin 1 0 2023-03-22 15:01:14.964
+!MESSAGE Kind:9, Project:test
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:15.126
+!MESSAGE BWDesigntimeResourceValidationHelper.validateActivityRequiredPlugin() Process [test.Process], Activity [Timer]
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:15.126
+!MESSAGE   bwActivity = com.tibco.bw.core.model.bwext.impl.BWActivityImpl@38dc01b5 (activityTypeID: bw.generalactivities.timer, version: 6.0.0.001)
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:15.126
+!MESSAGE   activityTypeId=null, isMissingRequiredPlugin=false, exception=null
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:15.126
+!MESSAGE BWDesigntimeResourceValidationHelper.validateActivityRequiredPlugin() Process [test.Process], Activity [Log]
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:15.141
+!MESSAGE   bwActivity = com.tibco.bw.core.model.bwext.impl.BWActivityImpl@304fc39 (activityTypeID: bw.generalactivities.log, version: 6.0.0.001)
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:15.142
+!MESSAGE   activityTypeId=null, isMissingRequiredPlugin=false, exception=null
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:15.371
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was acquired
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:15.373
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was released
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:24.131
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was acquired
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:24.131
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was released
+
+!ENTRY com.tibco.bw.studio.maven.plugin 1 0 2023-03-22 15:01:24.251
+!MESSAGE Kind:9, Project:test
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:24.327
+!MESSAGE BWDesigntimeResourceValidationHelper.validateActivityRequiredPlugin() Process [test.Process], Activity [Timer]
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:24.327
+!MESSAGE   bwActivity = com.tibco.bw.core.model.bwext.impl.BWActivityImpl@7c009230 (activityTypeID: bw.generalactivities.timer, version: 6.0.0.001)
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:24.327
+!MESSAGE   activityTypeId=null, isMissingRequiredPlugin=false, exception=null
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:24.336
+!MESSAGE BWDesigntimeResourceValidationHelper.validateActivityRequiredPlugin() Process [test.Process], Activity [Log]
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:24.337
+!MESSAGE   bwActivity = com.tibco.bw.core.model.bwext.impl.BWActivityImpl@2c92094c (activityTypeID: bw.generalactivities.log, version: 6.0.0.001)
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:24.337
+!MESSAGE   activityTypeId=null, isMissingRequiredPlugin=false, exception=null
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:58.181
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was acquired
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:58.187
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was released
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:58.194
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was acquired
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:01:58.196
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was released
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:02:21.719
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was acquired
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:02:21.726
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was released
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:02:21.733
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was acquired
+
+!ENTRY com.tibco.bw.core.design.resource 1 0 2023-03-22 15:02:21.739
+!MESSAGE com.tibco.bw.core.design.resource.refs.BWResourceChangeListernerImpl lock was released

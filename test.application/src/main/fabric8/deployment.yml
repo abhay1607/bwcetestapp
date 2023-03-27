@@ -1,27 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: bwce-sample
-kind: Deployment
+  labels:
+    app: bwce-sample
 spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bwce-sample
   template:
     metadata:
-      name: bwce-sample
-      namespace: default
       labels:
-        container: bwce-sample
-        project: bwce-sample
+        app: bwce-sample
+      namespace: default
     spec:
       containers:
-      - image: testapp
-        imagePullPolicy: Always
-        name: bwce-sample
+      - name: bwce-sample
+        image: abhay1607/testapp
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8085
         env:
         - name: APP_CONFIG_PROFILE
           value: docker
-        ports:
-        - containerPort: 8080
-  replicas: 1
-  selector:
-    container: bwce-sample
-    provider: fabric8
-    project: bwce-sample
-    group: com.tibco.bw

@@ -1,1 +1,3 @@
 1679398804627	Delete resource 'test.application.parent/pom.xml'
+1679554372323	Delete resource 'test.application/k8s-prod.properties'
+1679554374784	Delete resource 'test.application/k8s-dev.properties'

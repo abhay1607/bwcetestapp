@@ -1,20 +1,13 @@
+apiVersion: v1
+kind: Service
 metadata:
   name: bwce-sample-service
   namespace: default
-  labels:
-    container: bwce-sample
-    provider: fabric8
-    project: bwce-sample
-    group: com.tibco.bw
-kind: Service
 spec:
   selector:
-    container: bwce-sample
-    provider: fabric8
-    project: bwce-sample
-    group: com.tibco.bw
+    app: bwce-sample
   type: LoadBalancer
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 8080
+    - protocol: TCP
+      port: 80
+      targetPort: 8085
